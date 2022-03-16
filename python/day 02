@@ -1,0 +1,22 @@
+favorite_movie=['viswasam','master','airaa']
+print(favorite_movie)
+
+#reverse a list
+def reverse(lst):
+    lst.reverse()
+    return lst
+
+lst = ['viswasam','master','airaa']
+print(reverse(lst))
+
+def swplst(list):
+    get=list[-1],list[0]
+    list[0],list[-1]=get
+    return list
+list=[3,57,87,97,67,1002]
+print( swplst(list))
+
+#useage af opprarnd
+list=[1,2,3,4]
+a,*b,c=list
+print(a,b,c)
