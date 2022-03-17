@@ -1,0 +1,16 @@
+# if condition in python
+fruits={'banana''apple','cherry'}
+print(fruits)
+if 'apple' in fruits:
+    print('yes apple is a fruits')
+else:
+    print('no apple not fruits')
+
+    
+#dictinary datatype
+thisdict = {
+    "brand":"ford",
+    "model":"mustang",
+    "year":"2022"
+    }
+print(thisdict)
