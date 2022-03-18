@@ -1,0 +1,38 @@
+#if
+a=35
+b=100
+if a>b:
+    print("b is greoter than a")
+    
+#elif
+
+a=44
+b=44
+if b>a:
+    print("b is greater than a")
+elif a==b:
+    print("a and b are equal")
+
+a=200
+b=33
+if b>a:
+    print("b is greater than a")
+elif a==b:
+    print("a and b are equal")
+else:
+    print("a is greater than b")
+
+tamil_marks=73
+print(tamil_marks>40)
+if tamil_marks>40:
+    print("yay, you get a grade")
+else:
+    print("sorry, you are no grade")
+
+shirt='bulu'
+if shirt=='red or black':
+    print("by shirt")
+elif shirt == 'bulu or white':
+    print("waiting shirt")
+else:
+    print("no shirt")
