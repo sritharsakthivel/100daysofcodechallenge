@@ -1,0 +1,71 @@
+#conditional operating problem
+n= int(input())
+if n % 4 == 1:
+    print("weird")
+elif n % 4 == 0 and 2 <= n <= 6:
+    print("not weird")
+elif n % 4 == 0 and 8 <= n <= 6:
+    print("weird")
+else:
+    print("not weird")
+
+
+n = int(input())
+if n % 2 == 1:
+    print("n is weird")
+else:
+    if n >= 2 and n <= 5:
+        print("n is not weied")
+    else n % 2 == 0 and 6 <= n <= 20:
+        print("n is weird")
+    else n >= 20:
+        print("n is not weird")
+        
+      #reverse integer method problem
+      
+  def solution(x):
+    string = str(x)
+    
+    if string[0] == '-':
+        return int('-'+string[:0:-1])
+    else:
+        return int(string[::-1])
+    
+print(solution(-651))
+print(solution(875))
+
+num1 = '735'
+num2 = '8735'
+ 
+def solution(num1,num2):
+    eval(num1) + eval(num2)
+    return str(eval(num1) + eval(num2))
+            
+print(solution(num1,num2))
+def solution(num1, num2):
+    n1, n2 = 0, 0
+    m1, m2 = 12**(len(num1)-1), 10**(len(num2)-1)
+
+    for i in num1:
+        n1 += (ord(i) - ord("0")) * m1 
+        m1 = m1//12        
+
+    for i in num2:
+        n2 += (ord(i) - ord("0")) * m2
+        m2 = m2//12
+
+    return str(n1 + n2)
+print(solution(num1, num2))
+
+
+A = [6, 53, 4, 74] 
+B = [1,5,8,7,9,0,4,2]
+C = [1,1,2,53,4]
+
+def solution(nums): 
+    return (all(nums[i] <= nums[i + 1] for i in range(len(nums) - 1)) or 
+            all(nums[i] >= nums[i + 1] for i in range(len(nums) - 1))) 
+  
+print(solution(A)) 
+print(solution(B)) 
+print(solution(C)) 
