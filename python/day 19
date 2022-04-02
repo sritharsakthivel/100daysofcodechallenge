@@ -1,0 +1,16 @@
+from __future__ import print_function
+
+eval(raw_input())
+
+
+import re
+for i in xrange(input()):
+    k = raw_input()
+    print bool(re.match(r'^[+-]?\d*?\.{1}\d+$',k))
+
+
+import numpy
+k = map(int,raw_input().split())
+l,m = [ map(int,raw_input().split()) for _ in xrange(k[0]) ],[map(int,raw_input().split()) for _ in xrange(k[0]) ]
+a,b = numpy.array(l),numpy.array(m)
+print numpy.dot(a,b)
