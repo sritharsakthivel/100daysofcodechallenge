@@ -1,0 +1,75 @@
+print(' Good Morning')
+ 
+def main():
+          print('Hello Python')
+ 
+print('Good Evening')
+ 
+if __name__ == '__main__':
+         main()
+
+
+def get_got():
+print("&hellip;Fetching GOT Data&hellip; n")
+data="Bran Stark wins the Iron Throne. n"
+print("&hellip;GOT Data has been fetched&hellip;n")
+return data
+ 
+print("n Demo: Using Functions n")
+got=get_got()
+print(got)
+
+if __name__ == "__main__":
+            got = "Game of Thrones is a legendary shown"
+            print(got)
+            new_got = str.split(got)
+            print(new_got)
+
+print("n Main Function Demo n")
+    def demo(got):
+        print("&hellip;Beginning Game Of Thrones&hellip;n")
+        new_got = str.split(got)
+        print("&hellip;Game of Thrones has finished&hellip;n")
+        return new_got
+    def main():
+        got= "n Bran Stark wins the Iron Throne n"
+        print(got)
+        new_got = demo(got)
+        print(new_got)
+    if __name__ == "__main__":
+        main()
+
+print("n Main Function Demo n")
+    def demo(got):
+        print("&hellip;Beginning Game Of Thrones Demo1&hellip;n")
+        new_got = str.split(got)
+        print("&hellip;Game of Thrones has finished&hellip;n")
+        return new_got
+    def getgot():
+        print("&hellip;Getting GOT Data&hellip;n")
+        got="Bran Stark wins the Iron Throne n"
+        print("&hellip;GOT Data has been returned&hellip;n")
+        return got
+    def main():
+        got= getgot()
+        print(got)
+        new_got = demo(got)
+        print(new_got)
+    if __name__ == "__main__":
+        main()
+
+def my_fun():
+           print('Apple')
+print('I am in test1 file')
+if __name__ == '__main__':
+          print('test1.py will run as standalone')
+else:
+          print('test1.py will run only when imported')
+
+import test1
+print('I am in test2 file')
+test1.my_fun()
+if __name__ == '__main__':
+              print('test2.py will run as standalone')
+else:
+              print('test2.py will run only when imported')
