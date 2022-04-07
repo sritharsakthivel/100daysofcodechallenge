@@ -1,0 +1,64 @@
+mport itertools
+
+def animal_counter(lst):
+    chickens = 0	
+    rabbits = 0
+    for i in lst:
+        if i == 2:
+            chickens += 1
+        elif i == 4:
+            rabbits += 1
+    print(f"Number of chickens is {chickens}\nNumber of rabbits is {rabbits}")
+
+
+def animal_calculator(total_legs, total_heads, legs_of_each_species):
+    combinations = itertools.combinations_with_replacement(legs_of_each_species, total_heads)
+    correct_combos = []
+    for i in list(combinations):
+        if sum(i) == total_legs:
+            correct_combos.append(i)
+    print(correct_combos)
+    for i in correct_combos:
+        animal_counter(i)
+
+animal_calculator(94, 35, legs_of_each_species=[2,4])
+
+import numpy
+k = map(int,raw_input().split())
+l,m = [ map(int,raw_input().split()) for _ in xrange(k[0]) ],[map(int,raw_input().split()) for _ in xrange(k[0]) ]
+a,b = numpy.array(l),numpy.array(m)
+print numpy.dot(a,b)
+
+import re
+for i in xrange(input()):
+    k = raw_input()
+    print bool(re.match(r'^[+-]?\d*?\.{1}\d+$',k))
+
+def main():
+    # Replace all ______ with rjust, ljust or center. 
+
+    thickness = int(input())  # This must be an odd number
+    c = 'H'
+    
+    # Top Cone
+    for i in range(thickness):
+        print((c * i).rjust(thickness - 1) + c + (c * i).ljust(thickness - 1))
+    
+    # Top Pillars
+    for i in range(thickness + 1):
+        print((c * thickness).center(thickness * 2) + (c * thickness).center(thickness * 6))
+    
+    # Middle Belt
+    for i in range((thickness + 1) // 2):
+        print((c * thickness * 5).center(thickness * 6))    
+    
+    # Bottom Pillars
+    for i in range(thickness + 1):
+        print((c * thickness).center(thickness * 2) + (c * thickness).center(thickness * 6))    
+    
+    # Bottom Cone
+    for i in range(thickness):
+        print(((c * (thickness - i - 1)).rjust(thickness) + c + (c * (thickness - i - 1)).ljust(thickness)).rjust(thickness * 6))  
+
+if __name__ == '__main__':
+    main()
