@@ -1,0 +1,248 @@
+class Person:
+  def __init__(self, fname, lname):
+    self.firstname = fname
+    self.lastname = lname
+
+  def printname(self):
+    print(self.firstname, self.lastname)
+
+#Use the Person class to create an object, and then execute the printname method:
+
+x = Person("durga", "sri")
+x.printname()
+
+class Person:
+  def __init__(self, fname, lname):
+    self.firstname = fname
+    self.lastname = lname
+
+  def printname(self):
+    print(self.firstname, self.lastname)
+
+class Student(Person):
+  pass
+
+x = Student("dhiya", "sri")
+x.printname()
+
+
+class Person:
+  def __init__(self, fname, lname):
+    self.firstname = fname
+    self.lastname = lname
+
+  def printname(self):
+    print(self.firstname, self.lastname)
+
+class Student(Person):
+  def __init__(self, fname, lname):
+    Person.__init__(self, fname, lname)
+
+x = Student("durga", "dhiya")
+x.printname()
+
+
+class Person:
+  def __init__(self, fname, lname):
+    self.firstname = fname
+    self.lastname = lname
+
+  def printname(self):
+    print(self.firstname, self.lastname)
+
+class Student(Person):
+  def __init__(self, fname, lname):
+    super().__init__(fname, lname)
+
+x = Student("durga", "sri")
+x.printname()
+
+
+class Person:
+  def __init__(self, fname, lname):
+    self.firstname = fname
+    self.lastname = lname
+
+  def printname(self):
+    print(self.firstname, self.lastname)
+
+class Student(Person):
+  def __init__(self, fname, lname):
+    super().__init__(fname, lname)
+    self.graduationyear = 2019
+
+x = Student("durga", "durga")
+print(x.graduationyear)
+
+
+
+class Person:
+  def __init__(self, fname, lname):
+    self.firstname = fname
+    self.lastname = lname
+
+  def printname(self):
+    print(self.firstname, self.lastname)
+
+class Student(Person):
+  def __init__(self, fname, lname):
+    super().__init__(fname, lname)
+    self.graduationyear = 2019
+
+x = Student("durga", "sri")
+print(x.graduationyear)
+
+
+class Person:
+  def __init__(self, fname, lname):
+    self.firstname = fname
+    self.lastname = lname
+
+  def printname(self):
+    print(self.firstname, self.lastname)
+
+class Student(Person):
+  def __init__(self, fname, lname, year):
+    super().__init__(fname, lname)
+    self.graduationyear = year
+
+x = Student("durga", "sri", 2019)
+print(x.graduationyear)
+
+
+class Person:
+  def __init__(self, fname, lname):
+    self.firstname = fname
+    self.lastname = lname
+
+  def printname(self):
+    print(self.firstname, self.lastname)
+
+class Student(Person):
+  def __init__(self, fname, lname, year):
+    super().__init__(fname, lname)
+    self.graduationyear = year
+
+  def welcome(self):
+    print("Welcome", self.firstname, self.lastname, "to Agaram of", self.graduationyear)
+
+x = Student("durga", "sri", 2019)
+x.welcome()
+
+
+
+class Person(object):
+	
+	# Constructor
+	def __init__(self, name):
+		self.name = name
+
+	# To get name
+	def getName(self):
+		return self.name
+
+	# To check if this person is an employee
+	def isEmployee(self):
+		return False
+
+
+# Inherited or Subclass (Note Person in bracket)
+class Employee(Person):
+
+	# Here we return true
+	def isEmployee(self):
+		return True
+
+# Driver code
+emp = Person("diya") # An Object of Person
+print(emp.getName(), emp.isEmployee())
+
+emp = Employee("dhiya") # An Object of Employee
+print(emp.getName(), emp.isEmployee())
+
+
+# parent class
+class Person( object ):
+
+		# __init__ is known as the constructor		
+		def __init__(self, name, idnumber):
+				self.name = name
+				self.idnumber = idnumber
+		def display(self):
+				print(self.name)
+				print(self.idnumber)
+
+# child class
+class Employee( Person ):		
+		def __init__(self, name, idnumber, salary, post):
+				self.salary = salary
+				self.post = post
+
+				# invoking the __init__ of the parent class
+				Person.__init__(self, name, idnumber)
+
+a = Employee('durga', 886012, 200000, "Intern")
+
+
+a.display()
+
+class Base1(object):
+	def __init__(self):
+		self.str1 = "Geek1"
+		print("Base1")
+
+class Base2(object):
+	def __init__(self):
+		self.str2 = "Geek2"	
+		print("Base2")
+
+class Derived(Base1, Base2):
+	def __init__(self):
+		
+		Base1.__init__(self)
+		Base2.__init__(self)
+		print("Derived")
+		
+	def printStrs(self):
+		print(self.str1, self.str2)
+		
+
+ob = Derived()
+ob.printStrs()
+
+
+class Base(object):
+	
+	# Constructor
+	def __init__(self, name):
+		self.name = name
+
+	# To get name
+	def getName(self):
+		return self.name
+
+class Child(Base):
+	
+	# Constructor
+	def __init__(self, name, age):
+		Base.__init__(self, name)
+		self.age = age
+
+	# To get name
+	def getAge(self):
+		return self.age
+
+class GrandChild(Child):
+	
+	# Constructor
+	def __init__(self, name, age, address):
+		Child.__init__(self, name, age)
+		self.address = address
+
+	# To get address
+	def getAddress(self):
+		return self.address	
+
+# Driver code
+g = GrandChild("durga", 21, "sri")
+print(g.getName(), g.getAge(), g.getAddress())
