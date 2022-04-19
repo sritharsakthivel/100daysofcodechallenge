@@ -1,0 +1,84 @@
+fileptr = open("myfile.txt","r")  
+if fileptr:  
+    print("file is opened successfully with read mode only")
+
+fileptr = open("myfile1.txt","x")  
+if fileptr:  
+    print("new file was created successfully")
+
+fileptr = open("myfile.txt","r")
+if fileptr:
+	print("file is opened successfully")
+	content = fileptr.read(5) 
+	content = fileptr.read()  
+	print(content)
+else:
+	print("file not opened ")
+fileptr.close();
+
+fileptr = open("myfile.txt","r")
+if fileptr:
+	print("file is opened successfully")
+	content=fileptr.readline()
+	print(content)
+	content=fileptr.readline()
+	print(content)
+fileptr.close();
+
+fileptr = open("myfile.txt","w");    
+fileptr.write("Python is the modern day language.")    
+fileptr.close();
+
+f = open("myfile.txt", "w")
+f.writelines(["Python supports Files \n", "python supports Strings."])
+f.close()
+
+f = open("myfile.txt", "r")
+print(f.readline())
+print(f.tell())
+f.close();
+
+f = open("myfile.txt", "r")
+print(f.seek(9))
+print(f.read())
+f.close();
+
+f = open ("myfile.txt", "r")
+print(f.name)
+print(f.mode)
+print(f.closed)
+f.close()
+print(f.closed)
+
+fname = input("Enter file name: ")
+num_lines = 0
+num_words = 0					
+num_chars = 0
+try:
+	fp=open(fname,"r")
+	for i in fp:
+		words = i.split()
+		num_lines += 1
+		num_words += len(words)
+		num_chars += len(i)
+	print("Lines = ",num_lines)
+	print("Words = ",num_words)
+	print("Characters = ",num_chars)
+ fp.close()
+except Exception:
+	print("Enter valid filename")
+
+
+file = open('geek.txt','w')
+file.write("This is the write command")
+file.write("It allows us to write in a particular file")
+file.close()
+
+
+with open("file.text", "r") as file:
+
+
+	data = file.readlines()
+	for line in data:
+		word = line.split()
+		print (word)
