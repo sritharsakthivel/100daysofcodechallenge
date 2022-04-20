@@ -1,0 +1,78 @@
+a = 40
+b = 40
+
+if ( a is b ):
+   print("Line 1 - a and b have same identity")
+else:
+   print ("Line 1 - a and b do not have same identity")
+
+if ( id(a) == id(b) ):
+   print ("Line 2 - a and b have same identity")
+else:
+   print ("Line 2 - a and b do not have same identity")
+
+b = 30
+if ( a is b ):
+   print("Line 3 - a and b have same identity")
+else:
+   print("Line 3 - a and b do not have same identity")
+
+if ( a is not b ):
+   print ("Line 4 - a and b do not have same identity")
+else:
+   print ("Line 4 - a and b have same identity")
+
+
+list1=[1,2,3,4,5]
+list2=[6,7,8,9]
+for item in list1:
+	if item in list2:
+		print("overlapping")	
+else:
+	print("not overlapping")
+
+def overlapping(list1,list2):
+
+	c=0
+	d=0
+	for i in list1:
+		c+=1
+	for i in list2:
+		d+=1
+	for i in range(0,c):
+		for j in range(0,d):
+			if(list1[i]==list2[j]):
+				return 1
+	return 0
+list1=[1,2,3,4,5]
+list2=[6,7,8,9]
+if(overlapping(list1,list2)):
+	print("overlapping")
+else:
+	print("not overlapping")
+
+x = 24
+y = 20
+list = [10, 20, 30, 40, 50 ];
+
+if ( x not in list ):
+   print("x is NOT present in given list")
+else:
+   print("x is present in given list")
+
+if ( y in list ):
+   print("y is present in given list")
+else:
+   print("y is NOT present in given list")
+
+x = 200
+if (type(x) is int):
+	print("true")
+else:
+	print("false")
+
+x = 10.2
+if (type(x) is not int):
+	print("true")
+else:
+	print("false")
