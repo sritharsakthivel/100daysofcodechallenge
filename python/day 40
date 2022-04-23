@@ -1,0 +1,27 @@
+i = 100;
+if (i < 35):
+	print ("i is smaller than 35")
+	print ("i'm in if Block")
+else:
+	print ("i is greater than ")
+	print ("i'm in else Block")
+print ("i'm not in if and not in else Block")
+
+num = 15
+if num >= 0:
+	if num == 0:
+		print("Zero")
+	else:
+		print("Positive number")
+else:
+	print("Negative number")
+
+i = 13
+
+if (i == 13):
+	if (i < 15):
+		print ("i is smaller than 15")
+	if (i < 12):
+		print ("i is smaller than 12 too")
+	else:
+		print ("i is greater than 12 and smaller than 15")
