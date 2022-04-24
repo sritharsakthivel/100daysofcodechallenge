@@ -1,0 +1,18 @@
+from itertools import groupby
+
+S = str(raw_input())
+T = [list(g) for k, g in groupby(S)]
+
+for i in T:
+    print (len(i), int(i[0])),
+    
+    
+    import re
+
+k = re.findall(r'(?<=[^aeiouAEIOU ])[aeiouAEIOU]{2,}(?=[^aeiouAEIOU ])',raw_input())
+
+if k:
+    for i in k:
+        print i
+else:
+    print -1
