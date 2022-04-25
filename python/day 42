@@ -1,0 +1,50 @@
+def myFun(*argv):
+	for arg in argv:
+		print (arg)
+
+myFun('sri', 'Welcome', 'to', 'code pannu')
+
+
+def myFun(arg1, *argv):
+	print ("First argument :", arg1)
+	for arg in argv:
+		print("Next argument through *argv :", arg)
+
+myFun('durgasri', 'Welcome', 'to', 'agaram')
+
+
+def myFun(**kwargs):
+	for key, value in kwargs.items():
+		print ("%s == %s" %(key, value))
+
+
+myFun(first ='gurga', mid ='for', last='sri')
+
+
+def myFun(arg1, **kwargs):
+	for key, value in kwargs.items():
+		print ("%s == %s" %(key, value))
+
+# Driver code
+myFun("Hi", first ='durga', mid ='for', last='sri')
+
+
+def myFun(arg1, arg2, arg3):
+	print("arg1:", arg1)
+	print("arg2:", arg2)
+	print("arg3:", arg3)
+
+	
+args = ("durga", "for", "sri")
+myFun(*args)
+
+kwargs = {"arg1" : "durga", "arg2" : "sri", "arg3" : "durgasri"}
+myFun(**kwargs)
+
+
+def myFun(*args,**kwargs):
+	print("args: ", args)
+	print("kwargs: ", kwargs)
+
+
+myFun('durga','sri','durgasri',first="durga",mid="sri",last="durgasri")
