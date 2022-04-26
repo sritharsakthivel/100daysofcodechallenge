@@ -1,0 +1,173 @@
+from datetime import date
+
+my_date = date(1996, 12, 11)
+
+print("Date passed as argument is", my_date)
+
+from datetime import date
+
+today = date.today()
+
+print("Today's date is", today)
+
+
+from datetime import date
+
+today = date.today()
+
+print("Current year:", today.year)
+print("Current month:", today.month)
+print("Current day:", today.day)
+
+
+from datetime import datetime
+
+date_time = datetime.fromtimestamp(1887639468)
+print("Datetime from timestamp:", date_time)
+
+
+from datetime import date
+
+today = date.today()
+
+Str = date.isoformat(today)
+print("String Representation", Str)
+print(type(Str))
+
+from datetime import time
+
+my_time = time(13, 24, 56)
+
+print("Entered time", my_time)
+
+my_time = time(minute=12)
+print("\nTime with one argument", my_time)
+
+my_time = time()
+print("\nTime without argument", my_time)
+
+
+
+from datetime import time
+
+Time = time(11, 34, 56)
+
+print("hour =", Time.hour)
+print("minute =", Time.minute)
+print("second =", Time.second)
+print("microsecond =", Time.microsecond)
+
+
+from datetime import time
+
+Time = time(12,24,36,1212)
+
+Str = Time.isoformat()
+print("String Representation:", Str)
+print(type(Str))
+
+from datetime import datetime
+
+a = datetime(1999, 12, 12)
+print(a)
+
+a = datetime(1999, 12, 12, 12, 12, 12, 342380)
+print(a)
+
+
+from datetime import datetime
+
+a = datetime(1999, 12, 12, 12, 12, 12)
+
+print("year =", a.year)
+print("month =", a.month)
+print("hour =", a.hour)
+print("minute =", a.minute)
+print("timestamp =", a.timestamp())
+
+
+from datetime import datetime
+
+today = datetime.now()
+
+print("Current date and time is", today)
+
+
+from datetime import datetime as dt
+
+now = dt.now()
+
+string = dt.isoformat(now)
+print(string)
+print(type(string))
+
+
+from datetime import datetime, timedelta
+
+ini_time_for_now = datetime.now()
+
+print("initial_date", str(ini_time_for_now))
+
+future_date_after_2yrs = ini_time_for_now + timedelta(days=730)
+
+future_date_after_2days = ini_time_for_now + timedelta(days=2)
+
+print('future_date_after_2yrs:', str(future_date_after_2yrs))
+print('future_date_after_2days:', str(future_date_after_2days))
+
+from datetime import datetime, timedelta
+
+ini_time_for_now = datetime.now()
+
+print("initial_date", str(ini_time_for_now))
+
+new_final_time = ini_time_for_now + \
+	timedelta(days=2)
+
+print("new_final_time", str(new_final_time))
+
+print('Time difference:', str(new_final_time -
+							ini_time_for_now))
+
+from datetime import datetime as dt
+
+now = dt.now()
+print("Without formatting", now)
+
+s = now.strftime("%A %m %-Y")
+print('\nExample 1:', s)
+
+s = now.strftime("%a %-m %y")
+print('\nExample 2:', s)
+
+s = now.strftime("%-I %p %S")
+print('\nExample 3:', s)
+
+s = now.strftime("%H:%M:%S")
+print('\nExample 4:', s)
+
+from datetime import datetime
+
+time_data = ["25/05/99 02:35:8.023", "26/05/99 12:45:0.003",
+			"27/05/99 07:35:5.523", "28/05/99 05:15:55.523"]
+
+format_data = "%d/%m/%y %H:%M:%S.%f"
+
+for i in time_data:
+	print(datetime.strptime(i, format_data))
+
+
+from datetime import datetime
+from pytz import timezone
+
+format = "%Y-%m-%d %H:%M:%S %Z%z"
+
+now_utc = datetime.now(timezone('UTC'))
+print(now_utc.strftime(format))
+
+timezones = ['Asia/Kolkata', 'Europe/Kiev', 'America/New_York']
+
+for tzone in timezones:
+
+	now_asia = now_utc.astimezone(timezone(tzone))
+	print(now_asia.strftime(format))
