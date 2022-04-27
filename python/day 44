@@ -1,0 +1,18 @@
+import re
+m = re.search(r'([a-zA-Z0-9])\1',raw_input())
+if m:
+    print m.groups()[0]
+else:
+    print -1
+    
+    x = int(input())
+sizes = list(map(int,input().split()))
+n = int(input())
+sizes = Counter(sizes)
+pr = 0
+for i in range(n):
+    sz,pz = map(int,input().split())
+    if(sizes[sz]):
+        sizes[sz] -= 1
+        pr += pz
+print(pr)
