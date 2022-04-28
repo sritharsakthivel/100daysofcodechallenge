@@ -1,0 +1,20 @@
+import re
+
+t = int(raw_input())
+for _ in xrange(t):
+    uid = raw_input()
+
+    c1 = len(re.findall(r"[A-Z]", uid)) >= 2
+
+    c2 = len(re.findall(r"[0-9]", uid)) >= 3
+
+    c3 = len(re.findall(r"[a-zA-Z0-9]", uid)) == len(uid)
+
+    c4 = len(set(uid)) == len(uid)
+
+    c5 = len(re.findall(r".", uid)) == 10
+
+    if c1 and c2 and c3 and c4 and c5:
+        print 'Valid'
+    else:
+        print 'Invalid'
