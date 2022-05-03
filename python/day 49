@@ -1,0 +1,63 @@
+class Person:
+  def __init__(self, name, age):
+    self.name = name
+    self.age = age
+
+p1 = Person("sri", 22)
+
+print(p1.name)
+print(p1.age)
+
+class Person:
+  def __init__(self, name, age):
+    self.name = name
+    self.age = age
+
+  def myfunc(self):
+    print("Hello my name is " + self.name)
+
+p1 = Person("durga", 2019)
+p1.myfunc()
+
+class name:
+
+	name = 'durga'			
+
+	def __init__(self, breed, color):
+		
+		self.breed = breed
+		self.color = color	
+
+Rodger = name("Pug", "brown")
+Buzo = name("Bulldog", "black")
+
+print('Rodger details:')
+print('Rodger is a', 'kannamma.name')
+print('Breed: ', Rodger.breed)
+print('Color: ', Rodger.color)
+
+print('\nBuzo details:')
+print('Buzo is a', 'dhiya.name')
+print('Breed: ', Buzo.breed)
+print('Color: ', Buzo.color)
+
+print("\nAccessing class variable using class name")
+print('durgasri')	
+
+class name:
+	
+	name = 'durga'	
+	
+	def __init__(self, breed):
+		
+		self.breed = breed			
+
+	def setColor(self, color):
+		self.color = color
+		
+	def getColor(self):	
+		return self.color
+
+Rodger = name("sri")
+Rodger.setColor("durga")
+print(Rodger.getColor())
