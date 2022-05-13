@@ -1,0 +1,65 @@
+class Person(object):
+	def __init__(self, name):
+		self.name = name 
+	def getName(self):
+		return self.name
+	def isEmployee(self):
+		return False
+class Employee(Person):
+	def isEmployee(self):
+		return True
+emp = Person("durga")
+print(emp.getName(), emp.isEmployee())
+
+emp = Employee("durgasri")
+print(emp.getName(), emp.isEmployee())
+class Person( object ):		
+		def __init__(self, name, idnumber):
+				self.name = name
+				self.idnumber = idnumber
+		def display(self):
+				print(self.name)
+				print(self.idnumber)
+class Employee( Person ):		
+		def __init__(self, name, idnumber, salary, post):
+				self.salary = salary
+				self.post = post
+				Person.__init__(self, name, idnumber)
+a = Employee('sri', 886012, 200000, "durga")
+a.display()
+class Base1(object):
+	def __init__(self):
+		self.str1 = "durga"
+		print("Base1")
+class Base2(object):
+	def __init__(self):
+		self.str2 = "durgasri"	
+		print("Base2")
+class Derived(Base1, Base2):
+	def __init__(self):
+		Base1.__init__(self)
+		Base2.__init__(self)
+		print("Derived")		
+	def printStrs(self):
+		print(self.str1, self.str2)
+ob = Derived()
+ob.printStrs()
+class Base(object):
+	def __init__(self, name):
+		self.name = name
+	def getName(self):
+		return self.name
+class Child(Base):
+	def __init__(self, name, age):
+		Base.__init__(self, name)
+		self.age = age
+	def getAge(self):
+		return self.age
+class GrandChild(Child):
+	def __init__(self, name, age, address):
+		Child.__init__(self, name, age)
+		self.address = address
+	def getAddress(self):
+		return self.address	
+g = GrandChild("durga", 23, "sri")
+print(g.getName(), g.getAge(), g.getAddress())
