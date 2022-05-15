@@ -1,0 +1,36 @@
+def absolute_value(number):
+    if number >= 0:
+        return number
+    else:
+        return -number
+print(absolute_value(2))
+
+print(absolute_value(-4))
+
+def my_func():
+	x = 10
+	print("number:",x)
+x = 20
+my_func()
+print("number:",x)
+
+def greet(name):  
+    print ('Hello ', name)
+greet('durgasri')
+greet(123)
+
+def greet(*names):
+	i=0
+	print('Hello ', end='')
+	while len(names) > i:
+		print(names[i], end=', ')
+		i+=1
+greet('sri', 'durga', 'durgasri') 
+greet('durga', 'jagan', 'tamil', 'mani', 'gopi', 'kowsalya')
+
+class Person:
+  name = "sri"
+  age = 22
+  country = "India"
+  education = "mechatronics engineering"
+print(dir(Person))
