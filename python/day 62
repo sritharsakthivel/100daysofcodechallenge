@@ -1,0 +1,53 @@
+age = 22	
+salary = 30000	
+name = "sri"			
+print(age)
+print(salary)
+print(name)
+
+def f():
+	print(s)
+s = "I love python"
+f()
+
+def f():
+	s = "Me too."
+	print(s)
+s = "I love friends"
+f()
+print(s)
+
+a = 10
+def s():
+	print('Inside s() : ', a)
+def r():	
+	a = 20
+	print('Inside r() : ', a)
+def i():	
+	global a
+	a = 30
+	print('Inside i() : ', a)
+print('global : ', a)
+s()
+print('global : ', a)
+r()
+print('global : ', a)
+i()
+print('global : ', a)
+print ("Value of a using nonlocal is : ", end ="")
+def outer():
+	a = 5
+	def inner():
+		nonlocal a
+		a = 10
+	inner()
+	print (a)
+outer()
+print ("Value of a without using nonlocal is : ", end ="")
+def outer():
+	a = 5
+	def inner():
+		a = 10
+	inner()
+	print (a)
+outer()
