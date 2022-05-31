@@ -1,0 +1,49 @@
+a = 12
+b = -4
+c = 3+4j
+d = 7.90
+print(abs(a))
+print(abs(b))
+print(abs(c))
+print(abs(d))
+tuple = (0, True, False)
+x = all(tuple)
+print(x)
+sampledict = {0 : "Apple", 1 : "Orange"}
+x = all(sampledict)
+print(x)
+myset = {0, 1, 0}
+x = any(myset)
+print(x)
+a=5
+print(bin(a))
+print(bool(0))
+print(bool(-4.5))
+print(bool(None))
+print(bool("False"))
+print(bytearray())
+print(bytearray('Python','utf-8'))
+print(list())
+stringobj = 'durgasri'
+print(list(stringobj))
+tupleobj = ('D', 'U', 'R', 'G', 'A')
+print(list(tupleobj))
+listobj = ['1', '2', 'S', 'R', 'I']
+print(list(listobj))
+stringobj = 'durgasri'
+print(len(stringobj))
+tupleobj = ('D', 'U', 'R', 'G', 'A')
+print(len(tupleobj))
+listobj = ['1', '2', 'S', 'R', 'I']
+print(len(listobj))
+num = [2.5, 3, 4, -5]
+numSum = sum(num)
+print(numSum)
+numSum = sum(num, 20)
+print(numSum)
+def myFun(): 
+    return 5
+res = myFun 
+print(callable(res))
+num1 = 15 * 5
+print(callable(num1))
