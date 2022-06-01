@@ -1,0 +1,68 @@
+float = -54.26
+print('Absolute value of float is:', abs(float))
+int = -94
+print('Absolute value of integer is:', abs(int))
+complex = (3 - 4j)
+print('Absolute value or Magnitude of complex is:', abs(complex))
+l = [4, 5, 1]
+print(all(l))
+l = [0, 0, False]
+print(all(l))
+l = [1, 0, 6, 7, False]
+print(all(l))
+l = []
+print(all(l))
+l = [ 4, 5, 1]
+print(any( l ))
+l = [ 0, 0, False]
+print(any( l ))
+l = [ 1, 0, 6, 7, False]
+print(any( l ))
+l = []
+print(any( l ))
+str = '''durga
+for
+   durgasri'''
+print(ascii(str))
+num = 100
+print(bin(num))
+x = False
+print(bool(x))
+x = True
+print(bool(x))
+x = 5
+y = 10
+print(bool(x == y))
+x = None
+print(bool(x))
+x = ()
+print(bool(x))
+x = {}
+print(bool(x))
+x = 0.0
+print(bool(x))
+x = 'durgasri'
+print(bool(x))
+arr1 = bytearray(b"abcd")
+for value in arr1:
+	print(value)
+arr2 = bytearray(b"aaaacccc")
+print("Count of c is:", arr2.count(b"c"))
+l1 = ["sri", "durga", "dhiyasri"]
+s1 = "geek"
+obj1 = enumerate(l1)
+obj2 = enumerate(s1)
+print ("Return type:", type(obj1))
+print (list(enumerate(l1)))
+print (list(enumerate(s1, 2)))
+for i in range(10):
+	print(i, end=" ")
+print()
+l = [10, 20, 30, 40]
+for i in range(len(l)):
+	print(l[i], end=" ")
+print()
+sum = 0
+for i in range(1, 11):
+	sum = sum + i
+print("Sum of first 10 natural number :", sum)
