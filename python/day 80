@@ -1,0 +1,41 @@
+String1 = 'Welcome to the AGARAM'
+print("student education platform: ")
+print(String1)
+String1 = "I'm a srithar"
+print("\nagaram student: ")
+print(String1)
+String1 = '''durgasri"'''
+print("\nString with the use of Triple Quotes: ")
+print(String1)
+String1 = '''srithari sakthivel
+			For
+			Life'''
+print("\nCreating a multiline String: ")
+print(String1)
+String1 = "Hello, durgasri"
+print("Initial String: ")
+print(String1)
+String1 = "Welcome to the code pannu"
+print("\nUpdated String: ")
+print(String1)
+String1 = '''I'm a "sri kutty"'''
+print("Initial String with use of Triple Quotes: ")
+print(String1)
+String1 = 'I\'m a "kanmani"'
+print("\nEscaping Single Quote: ")
+print(String1)
+String1 = "I'm a \"sri\""
+print("\nEscaping Double Quotes: ")
+print(String1)
+String1 = "C:\\Python\\Geeks\\"
+print("\nEscaping Backslashes: ")
+print(String1)
+String1 = "{} {} {}".format('durgasri', 'For', 'Life')
+print("Print String in default order: ")
+print(String1)
+String1 = "{1} {0} {2}".format('durgasri', 'For', 'Life')
+print("\nPrint String in Positional order: ")
+print(String1)
+String1 = "{l} {f} {g}".format(g='durgasri', f='For', l='Life')
+print("\nPrint String in order of Keywords: ")
+print(String1)
