@@ -1,0 +1,25 @@
+text = 'sri For sri kutty'
+print("\nConverted String:")
+print(text.upper())
+print("\nConverted String:")
+print(text.lower())
+print("\nConverted String:")
+print(text.title())
+print("\nOriginal String")
+print(text)
+text = 'durga FOR durgasri'
+print("Original String:")
+print(text)
+print("\nConverted String:")
+print(text.lower())
+text = 'sri F0R sri kutty'
+print("Original String:")
+print(text)
+print("\nConverted String:")
+print(text.lower())
+text1 = 'sri For srithar'
+text2 = 'sri fOR sri kutty'
+if(text1.lower() == text2.lower()):
+	print("Strings are same")
+else:
+	print("Strings are not same")
