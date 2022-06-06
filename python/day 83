@@ -1,0 +1,39 @@
+import sqlite3
+connection = sqlite3.connect("gfg.db")
+crsr = connection.cursor()
+print("code pannu")
+connection.close()
+import sqlite3
+connection = sqlite3.connect("gfg.db")
+crsr = connection.cursor()
+sql_command = """CREATE TABLE emp( 
+staff_number INTEGER PRIMARY KEY,
+fname VARCHAR(20),
+lname VARCHAR(30),
+gender CHAR(1),
+joining DATE));"""
+crsr.execute(sql_command)
+connection.close()
+import sqlite3
+connection = sqlite3.connect("gfg.db")
+crsr = connection.cursor()
+sql_command = """INSERT INTO emp VALUES (22, "sri",\
+"durga", "M", "2014-03-28");"""
+crsr.execute(sql_command)
+sql_command = """INSERT INTO emp VALUES (1, "dhiya", "sri",\
+"M", "1980-10-28");"""
+crsr.execute(sql_command)
+connection.commit()
+connection.close()
+import sqlite3
+connection = sqlite3.connect("gfg.db")
+crsr = connection.cursor()
+pk = [1,2, 3, 4, 5, 6]
+f_name = ['srithar', 'durga', 'dhiya', 'preety', 'kowsalya']
+l_name = ['jagan', 'gopi', 'tamil;', 'sakthi', 'murthi']
+gender = ['M', 'F', 'M', 'M', 'F']
+date = ['2019-08-24', '2020-01-01', '2018-05-14', '2015-02-02', '2018-05-14']
+for i in range(5):
+	crsr.execute(f'INSERT INTO emp VALUES ({pk[i]}, "{f_name[i]}", "{l_name[i]}", "{gender[i]}", "{date[i]}")')
+connection.commit()
+connection.close()
