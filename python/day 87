@@ -1,0 +1,49 @@
+class Class1:
+	def m(self):
+		print("love")	
+class Class2(Class1):
+	def m(self):
+		print("friends")
+class Class3(Class1):
+	def m(self):
+		print("relationship")		
+class Class4(Class2, Class3):
+	pass	
+obj = Class4()
+obj.m()
+class Class1:
+	def m(self):
+		print("semester exam")
+class Class2(Class1):
+	def m(self):
+		print("semester exam is 2days")
+class Class3(Class1):
+	def m(self):
+		print("sub name PC")	
+class Class4(Class2, Class3):
+	def m(self):
+		print("'semester exam end day 17")
+obj = Class4()
+obj.m()
+Class2.m(obj)
+Class3.m(obj)
+Class1.m(obj)
+class Class1:
+	def m(self):
+		print("agaramn is good platform in sudent")
+class Class2(Class1):
+	def m(self):
+		print("agaram student is most of talented oerson")
+		Class1.m(self)
+class Class3(Class1):
+	def m(self):
+		print("3k student is graduate in agaram.")
+		Class1.m(self)	
+class Class4(Class2, Class3):
+	def m(self):
+		print("4k student studying in agaram")
+		Class2.m(self)
+		Class3.m(self)	
+obj = Class4()
+obj.m()
+
