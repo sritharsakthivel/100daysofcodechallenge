@@ -1,0 +1,19 @@
+import numpy as np
+dt = np.dtype('>i4')
+print("Byte order is:",dt.byteorder)
+print("Size is:",dt.itemsize)
+print("Data type is:",dt.name)
+import numpy as np
+a = np.array([1])
+print("type is: ",type(a))
+print("dtype is: ",a.dtype)
+import numpy as np
+dt = np.dtype([('name', np.unicode_, 16), ('sri', np.float64, (2,))])
+print(dt['sri'])
+print(dt['name'])
+import numpy as np
+dt = np.dtype([('name', np.unicode_, 16), ('sri', np.float64, (2,))])
+x = np.array([('jagan', (8.0, 7.0)), ('gopi', (6.0, 7.0))], dtype=dt)
+print(x[1])
+print("Grades of jagan are: ",x[1]['sri'])
+print("Names are: ",x['name'])
